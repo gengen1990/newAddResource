@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>template</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+
+		<style>
+			.buttom {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				flex-wrap: wrap;
+				padding-top: 90px;
+			}
+
+			.buttom div {
+				padding: 10px 15px;
+				border: #535353 solid 1px;
+				color: #353535;
+				margin: 10px;
+				border-radius: 10px;
+				font-size: 12px
+			}
+
+			.ys {
+				border: none !important;
+				color: #fff !important;
+				background: #2AC845 !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div i="second">
+			<div class="buttom">
+
+					<div tapmode='ys' onclick='initHost()'>现在是第四个页面，打开第5个页面</div>
+			</div>
+			<div class="buttom">
+				<div tapmode='ys' onclick='back()'>返回</div>
+			</div>
+		</div>
+	<script>
+	var initHost=function(){
+
+		api.openWin({
+			name:"fiveth",
+			url:"file:///android_asset/fiveth.html",
+			reload:true,
+			barColor:"#3F51B5"
+			});
+	}
+
+	var back = function(){
+		api.closeWin();
+	}
+
+	var initHost2=function(){
+		document.getElementById("aa").innerHTML='ok';
+
+	}
+
+	</script>
+	</body>
+
+</html>
